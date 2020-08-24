@@ -8,5 +8,10 @@ def index():
     return jsonify({'hello': 'world'})
 
 
+@app.route('/')
+def add():
+    return jsonify({'hello': 'world'})
+
+
 if __name__ == '__main__':
     app.run(debug=True)
