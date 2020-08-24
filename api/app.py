@@ -1,3 +1,4 @@
+from uuid import uuid4
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -8,9 +9,9 @@ def index():
     return jsonify({'hello': 'world'})
 
 
-@app.route('/')
-def add():
-    return jsonify({'hello': 'world'})
+@app.route('/user', methods=['POST'])
+def add_user():
+    return jsonify({'id': uuid4()})
 
 
 if __name__ == '__main__':
