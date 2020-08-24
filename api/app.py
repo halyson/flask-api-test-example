@@ -11,7 +11,7 @@ def index():
 
 @app.route('/user', methods=['POST'])
 def add_user():
-    return jsonify({'id': uuid4()})
+    return jsonify({'id': uuid4()}), 201
 
 
 if __name__ == '__main__':

@@ -7,3 +7,9 @@ def test_index(app, client):
     assert res.status_code == 200
     expected = {'hello': 'world'}
     assert expected == json.loads(res.get_data(as_text=True))
+
+
+def test_add_user(app, client):
+    del app
+    res = client.post('/user')
+    assert res.status_code == 201
